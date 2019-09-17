@@ -21,8 +21,6 @@ exports.handler = async (event, context) => {
 			}
 		};
 
-		console.log('data ===', body.requestId, data);
-
 		try {
 			await ddbClient.put(data).promise();
 			console.log("Request headers and body successfully posted to dynamodb", body.requestId);
