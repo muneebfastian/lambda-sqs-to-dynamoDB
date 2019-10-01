@@ -1,8 +1,6 @@
 exports.handler = async (event, context) => {
 	let AWS = require('aws-sdk');
 	AWS.config.update({
-		accessKeyId: process.env.accessKeyId,
-		secretAccessKey: process.env.secretAccessKey,
 		endpoint: process.env.dynamoEndpoint,
 		region: process.env.region
 	});
